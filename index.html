@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Fruit Ninja.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Fruit Ninja.data.gz",
-        frameworkUrl: buildUrl + "/Fruit Ninja.framework.js.gz",
-        codeUrl: buildUrl + "/Fruit Ninja.wasm.gz",
+        dataUrl: buildUrl + "/Fruit Ninja.data",
+        frameworkUrl: buildUrl + "/Fruit Ninja.framework.js",
+        codeUrl: buildUrl + "/Fruit Ninja.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "WebGL iFrame",
@@ -109,9 +109,8 @@
           fullscreenButton.onclick = () => {
             window.vuplex.SetFullscreen(1)/*https://support.vuplex.com/articles/webgl-fullscreen*/;
           };
-        })
-		//.catch((message) => {
-         // alert(message);
+        }).catch((message) => {
+          alert(message);
         });
       };
       document.body.appendChild(script);
