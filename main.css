@@ -4,380 +4,352 @@
 
 body,
 body * {
-    vertical-align: baseline;
-    border: 0 none;
-    outline: 0;
-    padding: 0;
-    margin: 0;
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
 }
 
 
 #loader-container {
-    z-index: 2000;
-    width: 320px;
-    height: 480px;
-    position: absolute;
-    z-index: 10000;
-    border: 1px solid #000;
+  z-index: 2000;
+  width: 320px;
+  height: 480px;
+  position: absolute;
+  background: #da7c22;
+  z-index: 10000;
+  border: 1px solid #000;
 }
 
 #loader {
-    width: 31px;
-    height: 31px;
-    margin: 224px auto;
-    display: block;
+  width: 31px;
+  height: 31px;
+  margin: 224px auto;
+  display: block;
 }
-
-
 
 
 /* Div layer for the entire container. */
 #dc_container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: none;
-    z-index: 2001;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: none;
+  background: #da7c22;
+  z-index: 2001;
 }
 
 #dc_content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  /*z-index     : 100;
+background-color:#da7c22;*/
 }
 
 #backDropDiv {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    opacity: 1;
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  /*background-color: #df8223;*/
+  opacity: 1;
+  z-index: 1;
+  /*background      : url(images/background.jpg) no-repeat 0 -100px;*/
+
 }
 
 #internalDiv {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    display: none;
-    overflow: hidden;
-    background: black;
-}
-
-/* Invisible button for background clickthrough. */
-#dc_background_exit {
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 299;
-    cursor: pointer;
-    opacity: 0;
-    display: none;
-}
-
-#dc_bgImage {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-#dc_expand_logo {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-}
-
-#dc_btnClose {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    top: 1px;
-    left: 1px;
-    z-index: 1999;
-    cursor: pointer;
-    transform: scale(0)
-}
-
-#dc_btnClose > img {
-    width: 100%;
-    height: 100%;
-}
-
-.scene {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 300;
-}
-
-.scene_container {
-    width: 100%;
-    height: 100%;
-}
-
-.background {
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.background > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.vertical_bg {
-    position: absolute;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    display: none;
-}
-
-.tablet .header {
-    padding: 10% 5%;
-}
-
-
-
-
-/* CUSTOM */
-img {
-    width: 100%;
-    height: auto;
-}
-
-.positionRel {
-    position: relative;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: none;
+  overflow: hidden;
 }
 
 .positionAb {
-    position: absolute;
+  position: absolute;
 }
 
 .positionAbFull {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.positionRel {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.h-center {
+  margin: 0 auto;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.disclaimer{
-
+@media (orientation: portrait) {
+  .scene {
+    transform: rotate(270deg);
+    width: 100vh !important;
+    height: 100vw !important;
+  }
 }
 
+/* Invisible button for background clickthrough. */
 
+#dc_background_exit {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 299;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+}
 
-/* GAME */
+#dc_bgImage {
+  position: absolute;
+  background-color: #343434;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#dc_expand_logo {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+#dc_btnClose {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 1px;
+  right: 1px;
+  z-index: 1999;
+  cursor: pointer;
+  transform: scale(0)
+}
+
+#dc_btnClose > img {
+  width: 100%;
+  height: 100%;
+}
+
+.scene {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+}
+
+.scene_container {
+  width: 100%;
+  height: 100%;
+}
+
 #game_timer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    top: 15%;
-    left: -2%;
-    z-index: 999;
-    transform: rotate(-90deg);
-    width: 20%;
+  position: absolute;
+  width: 10%;
+  top: 5%;
+  right: 9%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#game_clock {
-    margin-top: 2px;
+.game_clock {
+  margin-top: 2px;
 }
 
-#game_clock img {
-    width: auto;
-    height: 18px;
-    object-fit: contain;
-    object-position: center;
+.game_clock img {
+  height: 18px;
+  object-fit: contain;
+  object-position: center;
 }
 
-#game_current_time {
-    padding: 4px 0px 4px 8px;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 600;
+.game_current_time {
+  padding: 4px 0px 4px 8px;
+  color: #ff3eb5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
-#slider_v,
-#slider_h {
-    z-index: 50;
-    width: 100%;
-    height: 100%;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 9999;
 }
 
-.twentytwenty-vertical {
-    opacity: 1;
-    pointer-events: all;
+.game_instructions {
+  width: 50%;
+  left: 25%;
+  top: 35%;
+  pointer-events: none;
 }
 
-.twentytwenty-horizontal {
-    opacity: 0;
-    pointer-events: none;
-    z-index: 0;
+.game_placeholder_wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.twentytwenty-wrapper {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
+.game_placeholder {
+  width: 50%;
+  height: 65%;
+  pointer-events: none;
 }
 
+.buttons {
+  width: 13%;
+  margin-top: 3%;
+}
 
+.buttons_left {
+  margin-right: -3%;
+}
 
-/* END FRAME */
+.buttons_right {
+  margin-left: -3%;
+}
+
+.logo {
+  width: 125%;
+  align-self: baseline;
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+
+.copyright {
+  width: 65%;
+  margin-top: 20%;
+}
+
+.button_2,
+.button_4,
+.button_5 {
+  margin-top: -15%;
+}
+
+.button_icon,
+.button_icon_selected,
+.button_icon_checked {
+  pointer-events: none;
+}
+
+.button_icon_selected,
+.button_icon_checked,
+.button_cursor {
+  opacity: 0;
+}
+
+.element:not(.element_silhouette) {
+  opacity: 0;
+}
+
+.messages {
+  top: 5%;
+  width: 25%;
+  left: 37.5%;
+  pointer-events: none;
+}
+
+.message {
+  opacity: 0;
+}
+
+.game_disclaimer {
+  width: 40%;
+  left: 30%;
+  bottom: 1%;
+}
+
 #endFrame {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
-#instructions {
-    height: 55%;
-    z-index: 50;
-    pointer-events: none;
+.endFrame_container {
+  width: 50%;
+  height: 100%;
 }
 
-#instructions > img {
-    height: 100%;
-    width: auto;
+.endFrame_ad {
+  width: 30%;
 }
 
-#endcard {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.endFrame_logo {
+  width: 90%;
+  margin-top: -8%;
 }
 
-#endcard_logo {
-    height: 50%;
-    margin-left: 5%;
+.endFrame_legals {
+  width: 70%;
+  margin-top: -8%;
 }
 
-#endcard_text {
-    height: 64%;
+.cta {
+  width: 58%;
+  margin-top: -5%;
 }
 
-#cta {
-    height: 30%;
-    margin-right: 5%;
+.cta_wrapper {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
-#cta_wrapper {
-    width: 100%;
-    height: 100%;
-    bottom: 0;
+@media only screen and (min-width:1200px) {
+  #internalDiv {
+    max-width: 50vh;
+    max-height: 900px;
+  }
 }
 
-#endFrame_legal {
-    height: 26%;
-    right: 4%;
-    bottom: 37%;
-}
-
-#endcard_logo > img,
-#endcard_text > img,
-#cta > img,
-#endFrame_legal > img {
-    width: auto;
-    height: 100%;
-}
-
-/* Overrides Twenty-Twenty */
-.twentytwenty-left-arrow,
-.twentytwenty-right-arrow {
-    opacity: 0;
-}
-
-.twentytwenty-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#game .background {
-    z-index: 1;
-    pointer-events: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carBg:not(.carBg_1) {
-    opacity: 0;
-}
-
-#game .background > img {
-    width: 100%;
-    height: auto;
-    top: unset !important;
-    left: unset !important;
-}
-
-#clock_scene {
-    pointer-events: none;
-    z-index: 999;
-}
-
-/* MEDIA QUERIES */
-@media only screen and (min-width: 1200px) {
-    #internalDiv {
-        max-width: 50vh;
-        max-height: 900px;
-    }
-}
-
-/* Vertical only */
-@media (orientation: landscape) {
-    .scene {
-        transform: rotate(90deg);
-        width: 100vh !important;
-        height: 100vw !important;
-    }
-
-    #dc_btnClose {
-        left: unset;
-        right: 10px;
-    }
-
-    .twentytwenty-vertical {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .twentytwenty-horizontal {
-        opacity: 1;
-        pointer-events: all;
-        z-index: 999;
-    }
-
-    #game {
-        pointer-events: none;
-    }
+.tablet .scene_container {
+  position: absolute;
+  height: 80%;
+  top: 10%;
 }
