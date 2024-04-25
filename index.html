@@ -68,18 +68,6 @@
 </head>
 
 <body>
-    <!-- Close button element -->
-    <button id="closeButton" onclick="closePlayableAd()">Close</button>
-
-    <!-- Playable ad content goes here -->
-
-    <script>
-        // Function to close the playable ad when the close button is clicked
-        function closePlayableAd() {
-            // Send message to Unity to close the WebView
-            unityInstance.SendMessage('WebViewManager', 'CloseWebView');
-        }
-    </script>
     
     <div id="backDropDiv"></div>
     <div id="dc_container">
@@ -173,6 +161,20 @@
                                     <img id="cursor_5" src="images/cursor_5.png"
                                         class="image button_cursor positionAbFull">
                                 </div>
+                                    <div>
+                                        <!-- Close button element -->
+                                        <button id="closeButton" onclick="closePlayableAd()">Close</button>
+
+                                        <!-- Playable ad content goes here -->
+
+                                        <script>
+                                            // Function to close the playable ad when the close button is clicked
+                                            function closePlayableAd() {
+                                                // Send message to Unity to close the WebView
+                                                unityInstance.SendMessage('WebViewManager', 'CloseWebView');
+                                            }
+                                        </script>
+                                    </div>
                             </div>
 
                             <div class="game_instructions positionAb">
