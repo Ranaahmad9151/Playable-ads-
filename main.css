@@ -341,12 +341,12 @@ background-color:#da7c22;*/
   left: 0;
 }
 
-@media only screen and (min-width:1200px) {
+/* @media only screen and (min-width:1200px) {
   #internalDiv {
     max-width: 50vh;
     max-height: 900px;
   }
-}
+} */
 
 .tablet .scene_container {
   position: absolute;
