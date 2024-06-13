@@ -1,6 +1,32 @@
 // JavaScript Document
 //HTML5 Ad Template JS from DoubleClick by Google
 
+
+
+// function sendDataToUnity() {
+//   // Simulate data retrieval or any operation
+//   var data = "Hello from JavaScript!";
+  
+//   // Send data back to Unity
+//   // Assumes the GameObject is named "YourGameObject" and the script is named "WebGLCommunication"
+//   // Change these names according to your actual GameObject and script names
+//   SendMessage('YourGameObject', 'OnReceiveData', data);
+// }
+function sendMessageToUnity() {
+  const message = {
+      type: 'myMessage',
+      data: 'Hello, Unity!'
+  };
+  window.vuplex.postMessage(JSON.stringify(message));
+}
+
+
+
+
+
+
+
+
 "use strict"
 
 let uclass = {
